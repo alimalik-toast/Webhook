@@ -1,8 +1,7 @@
 import hashlib
 
-from ConfigManagement import ConfigManager
-from S3FileManagement import S3FileMgmt
 from API_Call import CloudFile
+from ConfigManagement import ConfigManager
 
 
 class CheckModifiedFile:
@@ -14,7 +13,6 @@ class CheckModifiedFile:
 
     def __init__(self):
         self.config = ConfigManager()
-        self.s3FileMgmt = S3FileMgmt()
         self.APICall = CloudFile()
         self.in_path = self.config.get_config('file_path') + self.config.get_config('file_name')
 
