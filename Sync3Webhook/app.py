@@ -2,19 +2,19 @@ import subprocess
 
 from flask import Flask, request, make_response
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route('/webhook', methods=['POST'])
+@application.route('/webhook', methods=['POST'])
 def respond():
     data = request.json
     status = data["state"]
 
-    if status == "AI":
+    if status == "POS":
         subprocess.call("./verify.sh")
         return make_response("Success")
 
-    elif status == "POS":
+    elif status == "AI":
         subprocess.call("./ocs.sh")
         return make_response("Success")
     else:
@@ -22,4 +22,4 @@ def respond():
 
 
 if __name__ == '__main__':
-    app.run()
+    application.run(host='0.0.0.0')

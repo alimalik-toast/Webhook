@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sleep 300
+
+firefox --new-window "https://menu-board.novolabs.com/menu-board/ticket-items?&lid=12975818&chid=16" & 
+
+https://menu-board.novolabs.com/menu-board/ticket-items?&lid=12975818&chid=16
