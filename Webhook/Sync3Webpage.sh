@@ -12,7 +12,7 @@ sleep 60
 #xdotool search --sync --name "Menu Board" key F11
 id=`xdotool search --name "Menu Board"`
 xdotool windowmap $id
-xdotool windowactivate $id key F11
+xdotool windowactivate $id key F1
 
 sleep 30
 
